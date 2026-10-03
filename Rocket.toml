@@ -1,0 +1,13 @@
+# Rocket.toml - Configuration for different environments
+
+[default]
+address = "0.0.0.0"
+port = 8000
+
+[release]
+address = "0.0.0.0"
+port = 8000
+log_level = "normal"
+shutdown.ctrlc = true
+shutdown.grace = 5
+shutdown.mercy = 5

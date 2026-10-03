@@ -1,0 +1,9 @@
+# Dockerfile.dev
+FROM rust:1.99-alpine
+RUN apk add --no-cache musl-dev
+RUN cargo install cargo-watch
+WORKDIR /app
+COPY . .
+EXPOSE 8000
+ENV ROCKET_PROFILE=debug
+CMD ["cargo", "watch", "-x", "run"]
